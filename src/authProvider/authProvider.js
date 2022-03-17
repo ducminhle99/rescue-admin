@@ -1,6 +1,6 @@
 import httpClient from "./httpClient";
 
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://rescueapi.herokuapp.com";
 const authProvider = {
     // called when the user attempts to log in
     login: ({ username, password }) => {

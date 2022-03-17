@@ -14,7 +14,7 @@ function App() {
   return (
     <Admin
       authProvider={authProvider}
-      dataProvider={restProvider('http://localhost:5000/api/admin', httpClient)}
+      dataProvider={restProvider('https://rescueapi.herokuapp.com/api/admin', httpClient)}
     >
 
       <Resource

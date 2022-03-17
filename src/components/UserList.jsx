@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrayField, ChipField, Datagrid, DateField, DeleteButton, Edit, EditButton, List, SearchInput, SingleFieldList, TextField } from 'react-admin'
+import { ArrayField, ChipField, Datagrid, DeleteButton, EditButton, List, SingleFieldList, TextField } from 'react-admin'
 
 const UserList = (props) => {
     return (
@@ -14,7 +14,7 @@ const UserList = (props) => {
                         <ChipField source="roleType" />
                     </SingleFieldList>
                 </ArrayField>
-                <EditButton />
+                {/* <EditButton /> */}
                 <DeleteButton />
             </Datagrid>
         </List>

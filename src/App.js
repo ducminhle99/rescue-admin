@@ -1,11 +1,14 @@
 import restProvider from 'ra-data-simple-rest';
 import * as React from "react";
-import { Admin, fetchUtils, Resource } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import authProvider from "./authProvider/authProvider";
+import httpClient from './authProvider/httpClient';
+import CategoryCreate from './components/CategoryCreate';
+import CategoryEdit from './components/CategoryEdit';
+import CategoryList from './components/CategoryList';
 import ShopList from "./components/ShopList";
 import UserEdit from "./components/UserEdit";
 import UserList from "./components/UserList";
-import httpClient from './authProvider/httpClient';
 function App() {
 
   return (
@@ -17,12 +20,19 @@ function App() {
       <Resource
         name="users"
         list={UserList}
-        edit={UserEdit}
+      // edit={UserEdit}
       />
 
       <Resource
         name="repairShop"
         list={ShopList}
+      />
+
+      <Resource
+        name='categories'
+        list={CategoryList}
+        create={CategoryCreate}
+        edit={CategoryEdit}
       />
     </Admin>
   );
